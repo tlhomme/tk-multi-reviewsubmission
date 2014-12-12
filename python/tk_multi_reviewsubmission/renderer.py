@@ -176,7 +176,9 @@ class Renderer(object):
         elif sys.platform == "linux2":
             # On linux, use ffmpeg
             node["file_type"].setValue("ffmpeg")
-            node["format"].setValue("MOV format (mov)")
+            node["format"].setValue("MP4 format (mp4)")
+            node["bitrate"].setValue(4000000)
+
 
         node["file"].setValue(path.replace(os.sep, "/"))
         return node  
